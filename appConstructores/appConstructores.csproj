@@ -71,6 +71,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\clConexion.cs" />
+    <Compile Include="Datos\clEmpleadoD.cs" />
+    <Compile Include="Entidades\clEmpleadoE.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -83,7 +85,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Entidades\" />
     <Folder Include="Logica\" />
     <Folder Include="Presentacion\" />
   </ItemGroup>
