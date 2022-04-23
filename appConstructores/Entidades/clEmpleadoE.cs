@@ -13,5 +13,7 @@ namespace appConstructores.Entidades
         public string apellidos { get; set; }
         public string ndocumento { get; set; }
         public string tipoempleado { get; set; }
+
     }
+
 }
