@@ -73,6 +73,7 @@
     <Compile Include="Datos\clConexion.cs" />
     <Compile Include="Datos\clEmpleadoD.cs" />
     <Compile Include="Datos\clEmpresaD.cs" />
+    <Compile Include="Entidades\clEmpleadoE.cs" />
     <Compile Include="Entidades\clEmpresaE.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
