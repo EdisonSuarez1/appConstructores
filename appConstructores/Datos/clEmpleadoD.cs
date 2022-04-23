@@ -1,22 +1,19 @@
 ﻿using appConstructores.Entidades;
-using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Web;
 
 namespace appConstructores.Datos
 {
     public class clEmpleadoD
     {
-        public List<clEmpleadoD> mtdListar()
+        public List<clEmpleadoE> mtdListar()
         {
             string sql = "SELECT * FROM constructores";
             clConexion objConexion = new clConexion();
             DataTable tblEmpleados = new DataTable();
             tblEmpleados = objConexion.mtdDesconectado(sql);
 
-            List<clEmpleadoD> listaEmpleados = new List<clEmpleadoD>();
+            List<clEmpleadoE> listaEmpleados = new List<clEmpleadoE>();
 
             int catReg = tblEmpleados.Rows.Count;
 
@@ -24,15 +21,12 @@ namespace appConstructores.Datos
             {
 
                 clEmpleadoE objDatosEmpleado = new clEmpleadoE();
-                objDatosEmpleado.idEmpleado = int.Parse(tblEmpleados.Rows[i]["idEmpleado"].ToString());
-                objDatosEmpleado.documeto = tblEmpleados.Rows[i]["documento"].ToString();
-                objDatosEmpleado.nombre = tblEmpleados.Rows[i]["nombre"].ToString();
-                objDatosEmpleado.apellido = tblEmpleados.Rows[i]["apellido"].ToString();
-                objDatosEmpleado.email = tblEmpleados.Rows[i]["email"].ToString();
-                objDatosEmpleado.fechaNacimiento = DateTime.Parse(tblEmpleados.Rows[i]["fechaNacimiento"].ToString());
-                objDatosEmpleado.celular = tblEmpleados.Rows[i]["celular"].ToString();
-                objDatosEmpleado.direccion = tblEmpleados.Rows[i]["direccion"].ToString();
-                objDatosEmpleado.idArea = int.Parse(tblEmpleados.Rows[i]["idArea"].ToString());
+                objDatosEmpleado.idempleado = int.Parse(tblEmpleados.Rows[i]["idEmpleado"].ToString());
+                objDatosEmpleado.nombres = tblEmpleados.Rows[i]["nombres"].ToString();
+                objDatosEmpleado.apellidos = tblEmpleados.Rows[i]["apellidos"].ToString();
+                objDatosEmpleado.ndocumento = tblEmpleados.Rows[i]["nombre"].ToString();
+                objDatosEmpleado.tipoempleado = tblEmpleados.Rows[i]["nombre"].ToString();
+
                 listaEmpleados.Add(objDatosEmpleado);
             }
 
